@@ -168,7 +168,7 @@ WITH cef_houston_rank AS (
 # Confirmed imaging_coverage table has no duplicates
   SELECT *, count(*) as cnt
 	FROM imaging_coverage
-	GROUP BY facility_id, insurance_carrier_id, cost_efficient-flag, city, state
+	GROUP BY facility_id, insurance_carrier_id, cost_efficient_flag, zip, city, state
 	HAVING cnt > 1
   ;
 
